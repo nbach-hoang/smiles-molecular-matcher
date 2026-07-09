@@ -4,29 +4,6 @@ A web application using Python programming language along with RDKit for automat
 
 It ranks candidate compound collections based on the lead compound in real time and hence provides an approach similar to high throughput chemical filtering in the pharmaceuticals domain. It is implemented using fully open-source technology stack using Streamlit.
 
-The program follows this pipeline:
-
-User enters target SMILES
-          │
-          ▼
-Convert to RDKit molecule
-          │
-          ▼
-Generate Morgan fingerprint (2048-bit ECFP4)
-          │
-          ▼
-Repeat for every candidate molecule
-          │
-          ▼
-Calculate Tanimoto similarity
-          │
-          ▼
-Sort by similarity score
-          │
-          ▼
-Display ranked results
-          │
-          ▼
-Render a 2D image of the target molecule
+The program follows this pipeline: User enters target SMILES -> Convert to RDKit molecule -> Generate Morgan fingerprint (2048-bit ECFP4) -> Repeat for every candidate molecule -> Calculate Tanimoto similarity -> Sort by similarity score -> Display ranked results -> Render a 2D image of the target molecule
 
 This is a simplified ligand-based virtual screening (LBVS) application. It does not predict biological activity or docking interactions; instead, it ranks candidate compounds based on 2D structural similarity to a known lead compound using Morgan (ECFP4) fingerprints and the Tanimoto coefficient, which is a common first-pass approach in early-stage drug discovery.
